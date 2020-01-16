@@ -1,0 +1,7 @@
+<div [ngClass]='setClasses()'>
+    <li class="child">
+        <button (click)="onToggle()" class="complete">complete</button>
+        <span class="grow">{{ todo.task }}</span>
+        <button class="delete" (click)="onDelete()">X</button>
+    </li>
+</div>

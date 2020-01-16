@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>TODO List</h1>
+    <p>A place to store your todos</p>
+
+    <input type="text" placeholder="filter your to-dos" />
+
+    <ol>
+        <app-todo *ngFor="let todo of todos;" [todo]='todo'>
+        </app-todo>
+    </ol>
+
+    <input type="text" placeholder="Add you to do">
+    <button class="add">add</button>
+
+</div>

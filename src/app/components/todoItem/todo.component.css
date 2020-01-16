@@ -1,0 +1,22 @@
+.is-complete {
+    text-decoration: line-through;
+}
+
+.delete {
+    border: none;
+}
+
+.child {
+    display: flex;
+}
+
+.grow {
+    flex: 1;
+}
+
+.complete {
+    border-color: #ff69b4;
+    background-color: white;
+    color: #ff69b4;
+    border-radius: 5px;
+}

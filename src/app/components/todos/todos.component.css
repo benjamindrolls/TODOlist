@@ -1,0 +1,27 @@
+.container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow:  0px 0px 5px 0px rgba(0,0,0,0.75);
+    padding-left: 1%;
+}
+
+.add {
+    width: 99%;
+    padding: 4px;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: .5%;
+    margin-top: .5%;
+}
+
+input {
+    font-size: 20px;
+    width: 99%;
+    color: #bbb;
+}
+
+ol {
+    padding: 0;
+}
