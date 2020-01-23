@@ -1,6 +1,5 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Todo } from 'src/app/class/todos';
-import { TodosComponent } from '../todos/todos.component';
 
 @Component({
   selector: 'app-todo',
@@ -9,6 +8,9 @@ import { TodosComponent } from '../todos/todos.component';
 })
 export class TodoComponent implements OnInit {
   @Input() todo: Todo;
+
+  @Output() deleted = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
@@ -28,5 +30,6 @@ export class TodoComponent implements OnInit {
   }
 
   onDelete() {
+    this.deleted.emit()
   }
 }

@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Todo } from '../../class/todos';
 
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',
-  styleUrls: ['./todos.component.css']
+  styleUrls: ['./todos.component.css'],
 })
 export class TodosComponent implements OnInit {
-  todos:Todo[];
+  @Input() todos:Todo[];
+  @Input() task:string;
+  @Input() completed:boolean;
   constructor() { }
 
   ngOnInit() {
@@ -23,9 +25,26 @@ export class TodosComponent implements OnInit {
       {
         task: 'take out garbage',
         completed: false
+      },
+      {
+        task: 'fold clothes',
+        completed: false
+      },
+      {
+        task: 'be awesome',
+        completed: false
       }
     ]
 
   }
 
+  deleteItem($event, index) {
+    this.todos.splice(index, 1);
+    this.todos = [...this.todos];
+  }
+
+
+  addItem(newItem) {
+    this.todos = [...this.todos, {task: newItem, completed: false}]
+  }
 }
